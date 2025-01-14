@@ -14,7 +14,7 @@
       <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-        <a class="navbar-brand" href="#">My Music Manager</a>
+        <a class="navbar-brand" href="index.html">My Music Manager</a>
         <button 
             class="navbar-toggler" 
             type="button" 
@@ -28,9 +28,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Dashboard</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Teams</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('sign_in') }}">Sign in </a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('settings') }}">Settings</a></li>
             </ul>
         </div>
         </div>
@@ -84,6 +84,41 @@
             <div class="card shadow-sm">
             <div class="card-header">
                 <h2 class="h5 mb-0">Your Songs</h2>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                    <th scope="col">Song Name</th>
+                    <th scope="col">Genre</th>
+                    <th scope="col">Artist Name</th>
+                    <th scope="col"> </th>
+                    <th scope="col" style="width: 150px;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example Project Row -->
+                    <tr>
+                    <td>Website Redesign</td>
+                    <td><span class="badge bg-success">In Progress</span></td>
+                    <td>2024-12-31</td>
+                    <td>John, Jane</td>
+                    <td>
+                        <a href="#" class="me-2 text-decoration-none">Edit</a>
+                        <a href="#" class="text-decoration-none text-danger">Delete</a>
+                    </td>
+                    </tr>
+                    <!-- Additional project rows can be added here -->
+                </tbody>
+                </table>
+            </div>
+            </div>
+        </section>
+        <section class="container mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header">
+                    <h2 class="h5 mb-0">Your Recommendations</h2>
+                </div>
             </div>
             <div class="table-responsive">
                 <table class="table table-hover align-middle mb-0">
