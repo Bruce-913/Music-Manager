@@ -5,11 +5,11 @@ from app import app
 def index():
     return render_template('index.html')
 
-@app.route('/about')
-def about():
-    return render_template('about.html')
+@app.route('/settings')
+def settings():
+    return render_template('settings.html')
 
-@app.route('/contact')
+@app.route('/sign-in')
 
-def contact():
-    return render_template('contact.html')
+def sign_in():
+    return render_template('sign-in.html')
